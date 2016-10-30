@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# vim :ft=sh
+
+mkdir -p /logs/elasticsearch
+mkdir -p /logs/nginx
+
+chown elastic:elastic /logs/elasticsearch
+chown elastic:elastic /logs/nginx
+chown elastic:elastic /data
+
+supervisord -n
